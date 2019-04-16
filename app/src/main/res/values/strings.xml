@@ -6,4 +6,10 @@
     <string name="home_button">Home</string>
     <string name="space" />
     <string name="setting">Setting</string>
+    <string name="camera">Camera</string>
+    <string name="label_camera">Camera</string>
+    <string name="label_gallery">Gallery</string>
+    <string name="label_remove">Remove</string>
+    <string name="label_change_profile">Change Profile</string>
+    <string name="child_crop">cropped</string>
 </resources>
