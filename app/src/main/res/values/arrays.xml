@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="tab_icons_selected">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_settings_blackdark_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_settings_blackdark_24dp</item>
+    </integer-array>
+
+    <integer-array name="tab_icons">
+        <item>@drawable/ic_home_white_24dp</item>
+        <item>@drawable/ic_settings_black_24dp</item>
+        <item>@drawable/ic_home_white_24dp</item>
+        <item>@drawable/ic_settings_black_24dp</item>
+    </integer-array>
+
+</resources>
