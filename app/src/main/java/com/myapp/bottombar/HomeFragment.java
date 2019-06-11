@@ -12,9 +12,12 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +28,8 @@ import android.widget.Button;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -58,6 +63,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
   private Uri profileImageUri;
   private String TAG = HomeFragment.this.getClass().getSimpleName();
   private Uri mImageURI;
+  private List<Integer> photosUrl=new ArrayList<>();
 
   public HomeFragment() {
     // Required empty public constructor
@@ -97,6 +103,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     View view = inflater.inflate(R.layout.fragment_home, container, false);
     cameraButton = view.findViewById(R.id.camera);
     cameraButton.setOnClickListener(this);
+
+    // ....Viewpager for sliding images
+    photosUrl.add(R.mipmap.ic_launcher);
+    photosUrl.add(R.mipmap.ic_launcher);
+    photosUrl.add(R.mipmap.ic_launcher);
+
+    ViewPager pager = view.findViewById(R.id.photos_viewpager);
+    CustomPagerAdapter adapter = new CustomPagerAdapter(getContext(), photosUrl);
+    pager.setAdapter(adapter);
+
+    TabLayout tabLayout = view.findViewById(R.id.tab_layout);
+    tabLayout.setupWithViewPager(pager, true);
+
     return view;
   }
 

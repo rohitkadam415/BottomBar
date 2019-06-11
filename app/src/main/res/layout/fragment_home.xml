@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <Button
+        android:id="@+id/camera"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/camera"
-        android:text="@string/camera" />
+        android:text="@string/camera"
+        android:visibility="gone" />
 
-</FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photos_viewpager"
+        android:layout_height="300dp"
+        android:layout_width="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+</LinearLayout>

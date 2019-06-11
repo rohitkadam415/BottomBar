@@ -134,7 +134,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.BaseOnT
     boolean isHome = false;
     Fragment fragment = getSupportFragmentManager().getFragments().get(tab.getPosition());
     if (fragment instanceof HomeFragment) {
-
       isHome = true;
     } else if (fragment instanceof SettingFragment) {
     } else if (fragment instanceof HomeFragment) {
